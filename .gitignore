@@ -1,0 +1,6 @@
+obj/
+bin/
+Personal_Budget.*
+incomes.xml
+expenses.xml
+users.xml
