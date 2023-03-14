@@ -31,11 +31,11 @@ Registry FinanceManager::getNewRegistrationData() {
     }
     system("cls");
     if (choice == 1){
-        cout << "Data przychodu: " << checkCurrentDate() << endl;
+        cout << "Data operacji: " << checkCurrentDate() << endl;
     } else {
-        cout << "Data przychodu: " << registry.getDateOfRegistry() << endl;
+        cout << "Data operacji: " << registry.getDateOfRegistry() << endl;
      }
-    cout << "Podaj typ przychodu: ";
+    cout << "Podaj typ operacji: ";
     registry.setType(HelperMethods::loadLine());
 
     cout << "Podaj wysokosc operacji: ";
