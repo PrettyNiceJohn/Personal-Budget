@@ -14,7 +14,7 @@ public:
     static string convertIntToString(int number);
     static string checkDotInAmount(string amount);
     static string checkComaInAmount(string amount);
-    static string cutDouble(string amountStr);
+    static string cutFloat(string amountStr);
 };
 
 #endif

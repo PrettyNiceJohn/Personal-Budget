@@ -30,13 +30,17 @@ Registry FinanceManager::getNewRegistrationData() {
         break;
     }
     system("cls");
-    cout << "Data przychodu: " << checkCurrentDate() << endl;
+    if (choice == 1){
+        cout << "Data przychodu: " << checkCurrentDate() << endl;
+    } else {
+        cout << "Data przychodu: " << registry.getDateOfRegistry() << endl;
+     }
     cout << "Podaj typ przychodu: ";
     registry.setType(HelperMethods::loadLine());
 
     cout << "Podaj wysokosc operacji: ";
     string amountStr = HelperMethods::checkComaInAmount(HelperMethods::loadLine());
-    registry.setAmount(stod(amountStr));
+    registry.setAmount(stof(amountStr));
 
     return registry;
 }
@@ -66,8 +70,8 @@ char FinanceManager::selectDateOfOperation() {
 
 void FinanceManager::currentMonthsBalanceSheet() {
     system("cls");
-    double sumOfIncomes = 0.00;
-    double sumOfExpenses = 0.00;
+    float sumOfIncomes = 0.00;
+    float sumOfExpenses = 0.00;
     int lengthOfVector = incomes.size();
     if (!incomes.empty()) {
         cout << "               >>> Przychody <<<" << endl;
@@ -237,8 +241,8 @@ bool FinanceManager::checkLeapYear(int yearInt) {
 
 void FinanceManager::previousMonthsBalanceSheet() {
     system("cls");
-    double sumOfIncomes = 0.00;
-    double sumOfExpenses = 0.00;
+    float sumOfIncomes = 0.00;
+    float sumOfExpenses = 0.00;
     int lengthOfVector = incomes.size();
     if (!incomes.empty()) {
         cout << "               >>> Przychody <<<" << endl;
@@ -326,8 +330,8 @@ void FinanceManager::previousMonthsBalanceSheet() {
 
 void FinanceManager::balanceSheetForTheSelectedPeriod() {
     system("cls");
-    double sumOfIncomes = 0.00;
-    double sumOfExpenses = 0.00;
+    float sumOfIncomes = 0.00;
+    float sumOfExpenses = 0.00;
 
     cout << "Wskaz poczatek okresu: [RRRR-MM-DD]" << endl;
     string beginOfPeriod = HelperMethods::loadLine();

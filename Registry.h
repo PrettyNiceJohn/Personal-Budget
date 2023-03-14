@@ -8,13 +8,13 @@
 using namespace std;
 
 class Registry {
-    double amount;
+    float amount;
     string date;
     int userId;
     string type;
     int registryId;
 public:
-        Registry(int userId = 0, string date = "", string type = "", double amount = 0.00, int registryId = 0) {
+        Registry(int userId = 0, string date = "", string type = "", float amount = 0.00, int registryId = 0) {
         this -> userId = userId;
         this -> date = date;
         this -> type = type;
@@ -24,12 +24,12 @@ public:
     void setUserId(int idOfLoggedInUser);
     void setDate(string dateOfRegistry);
     void setType(string typeOfRegistry);
-    void setAmount(double amountValue);
+    void setAmount(float amountValue);
     void setRegistryId(int regId);
 
     int getUserId();
     string getDateOfRegistry();
-    double getAmount();
+    float getAmount();
     string getTypeOfRegistry();
     int getRegistryId();
 

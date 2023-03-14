@@ -64,17 +64,17 @@ string HelperMethods::checkComaInAmount(string amount) {
     return amount;
 }
 
-string HelperMethods::cutDouble(string amountStr) {
-    int lengthOfDouble = amountStr.length();
-    string correctDouble = "";
+string HelperMethods::cutFloat(string amountStr) {
+    int lengthOfFloat = amountStr.length();
+    string correctFloat = "";
 
-    for (int i = 0; i < lengthOfDouble; i++) {
-        correctDouble += amountStr[i];
+    for (int i = 0; i < lengthOfFloat; i++) {
+        correctFloat += amountStr[i];
         if (amountStr[i] == '.'){
-            correctDouble += amountStr[i+1];
-            correctDouble += amountStr[i+2];
-                    break;
+            correctFloat += amountStr[i+1];
+            correctFloat += amountStr[i+2];
+            break;
         }
     }
-    return correctDouble;
+    return correctFloat;
 }

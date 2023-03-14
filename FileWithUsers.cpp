@@ -69,7 +69,7 @@ void FileWithUsers::changeUserDataInXmlFile(string newPassword, int idOfLoggedIn
             xml.FindElem();
             xml.FindElem();
             xml.SetData(newPassword);
-            xml.Save(getFileName());
+            xml.Save(FileWithUsers::getFileName());
             break;
         }
         xml.OutOfElem();

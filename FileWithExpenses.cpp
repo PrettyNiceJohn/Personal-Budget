@@ -2,7 +2,7 @@
 
 void FileWithExpenses::addExpenseToXmlFile(Registry registry) {
     string amountStr = HelperMethods::checkDotInAmount(to_string(registry.getAmount()));
-    string correctAmountStr = HelperMethods::cutDouble(amountStr);
+    string correctAmountStr = HelperMethods::cutFloat(amountStr);
 
     CMarkup xml;
     bool xmlExist = xml.Load(getFileName());
@@ -43,7 +43,7 @@ vector<Registry> FileWithExpenses::loadExpensesFromFile(int userId){
         xml.FindElem();
         registry.setType(xml.GetData());
         xml.FindElem();
-        registry.setAmount(stod(xml.GetData()));
+        registry.setAmount(stof(xml.GetData()));
         if (registry.getUserId() == userId){
             expenses.push_back(registry);
         }

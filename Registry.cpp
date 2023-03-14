@@ -1,6 +1,6 @@
 #include "Registry.h"
 
-void Registry::setAmount(double amountValue) {
+void Registry::setAmount(float amountValue) {
     amount = amountValue;
 }
 
@@ -28,7 +28,7 @@ int Registry::getUserId() {
     return userId;
 }
 
-double Registry::getAmount() {
+float Registry::getAmount() {
     return amount;
 }
 
